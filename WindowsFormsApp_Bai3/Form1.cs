@@ -51,15 +51,21 @@ namespace WindowsFormsApp_Bai3
             }
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void sinhViênToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Timkiemsinhvien f = new Timkiemsinhvien(); // Tạo mới Form Tìm kiếm sinh viên
             MoForm(f);
+        }
+
+        private void cổngCOMToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormComPort f = new FormComPort(); // Phải khớp với tên class là FormComPort
+            MoForm(f);
+        }
+
+        private void contextMenuStrip2_Opening(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+
         }
     }
 }

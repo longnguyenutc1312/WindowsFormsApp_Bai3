@@ -29,7 +29,7 @@ namespace WindowsFormsApp_Bai3
             try
             {
                 MoKetNoi();
-                 SqlDataAdapter adapter = new SqlDataAdapter("SELECT * FROM Khoa", sqlCon); 
+                SqlDataAdapter adapter = new SqlDataAdapter("SELECT * FROM Khoa", sqlCon); 
                 DataTable dt = new DataTable();
                 adapter.Fill(dt);
                 dgvKhoa.DataSource = dt;
@@ -69,7 +69,7 @@ namespace WindowsFormsApp_Bai3
             try
             {
                 MoKetNoi();
-                // Sửa tên khoa dựa theo mã khoa [cite: 149, 150]
+                // Sửa tên khoa dựa theo mã khoa
                 SqlCommand cmd = new SqlCommand("UPDATE Khoa SET TenKhoa=@ten WHERE MaKhoa=@ma", sqlCon);
                 cmd.Parameters.AddWithValue("@ma", txtMaKhoa.Text);
                 cmd.Parameters.AddWithValue("@ten", txtTenKhoa.Text);

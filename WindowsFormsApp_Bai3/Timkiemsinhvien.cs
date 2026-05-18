@@ -14,7 +14,7 @@ namespace WindowsFormsApp_Bai3
     public partial class Timkiemsinhvien : Form
     {
         // ==========================================
-        // BỔ SUNG MODULE 2: THIẾT LẬP KẾT NỐI
+        // BỔ SUNG MODULE: THIẾT LẬP KẾT NỐI
         // ==========================================
         string strCon = @"Data Source=.\SQLEXPRESS;Initial Catalog=QuanLySinhVien;Integrated Security=True";
         SqlConnection sqlCon = null;
@@ -38,9 +38,9 @@ namespace WindowsFormsApp_Bai3
                 MoKetNoi(); // Bây giờ hàm này đã tồn tại trong Form này
 
                 string sql = @"SELECT sv.MaSV, sv.HoTen, sv.NgaySinh, sv.AnhSV, l.TenLop, l.KhoaHoc 
-               FROM SinhVien sv 
-               INNER JOIN Lop l ON sv.MaLop = l.MaLop 
-               WHERE sv.MaSV LIKE @tk OR sv.HoTen LIKE @tk";
+                FROM SinhVien sv 
+                INNER JOIN Lop l ON sv.MaLop = l.MaLop 
+                WHERE sv.MaSV LIKE @tk OR sv.HoTen LIKE @tk";
 
                 SqlCommand cmd = new SqlCommand(sql, sqlCon);
 
